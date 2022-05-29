@@ -11,7 +11,7 @@ function Entertain({navigation}) {
     const newspaper =require('../assets/newspaper.png')
     useEffect(()=>{
     //api link
-        fetch('https://newsapi.org/v2/top-headlines?country=ng&category=entertainment&apiKey=922c23065f764af8af4b68a48a08d796',{
+        fetch('https://newsapi.org/v2/top-headlines?country=ng&category=entertainment&apiKey=....',{
             method:'GET'
         }).then(response=>response.json()).then((json)=>{
             // lo
@@ -44,7 +44,9 @@ function Entertain({navigation}) {
         <SafeAreaView style={styles.body}>
             <StatusBar style='auto' />
             <Text style={{fontSize:20, fontWeight:'bold',alignSelf:'center', textDecorationLine:'underline', color:'#007aff'}}>Entertainment Headline NG</Text>
-            <AdMobBanner bannerSize='smartBanner' adUnitID='ca-app-pub-7755189382272714/3523064967' servePersonalizedAds={true} />
+
+            //addmob banner
+            <AdMobBanner bannerSize='smartBanner' adUnitID='...' servePersonalizedAds={true} />
             
             {isLoading==true ? <ActivityIndicator size='large' color='#007aff' style={{marginTop:'80%'}} /> : (
             <FlatList data={datas} style={{paddingHorizontal:10, marginBottom:20}}  renderItem={({item})=>{ 
