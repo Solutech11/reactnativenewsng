@@ -12,7 +12,7 @@ function Sport({navigation}) {
     const newspaper =require('../assets/newspaper.png')
     useEffect(()=>{
     // api link
-        fetch('https://newsapi.org/v2/top-headlines?country=ng&category=sports&apiKey=922c23065f764af8af4b68a48a08d796',{
+        fetch('https://newsapi.org/v2/top-headlines?country=ng&category=sports&apiKey=...',{
             method:'GET'
         }).then(response=>response.json()).then((json)=>{
             // lo
@@ -45,7 +45,7 @@ function Sport({navigation}) {
         <SafeAreaView style={styles.body}>
             <StatusBar style='auto' />
             <Text style={{fontSize:20, fontWeight:'bold',alignSelf:'center', textDecorationLine:'underline', color:'#007aff'}}>Sport Headline NG</Text>
-            <AdMobBanner bannerSize='smartBanner' adUnitID='ca-app-pub-7755189382272714/3523064967' servePersonalizedAds={true} />
+            <AdMobBanner bannerSize='smartBanner' adUnitID='...' servePersonalizedAds={true} />
             
             {isLoading==true ? <ActivityIndicator size='large' color='#007aff' style={{marginTop:'80%'}} /> : (
             <FlatList data={datas} style={{paddingHorizontal:10, marginBottom:20}}  renderItem={({item})=>{ 
